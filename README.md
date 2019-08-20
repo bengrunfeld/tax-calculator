@@ -1,13 +1,10 @@
 # Tax Calculator
 
-## Steps to calculate your tax:
+## Coding Exercise:
 
-1. Add up revenue from all months
-2. Add up all allowable deducations
-3. Subtract total deductions from total revenue
-4. Apply the company tax rate to taxable income
-5. Calculate the medicare levy and add it to total tax owed
-6. Output the result as total tax owed
+1. Implement types on the data file 
+2. Implement types on the tax calculator file
+3. Business name and slogan were forgotten in the Tax Report. Implement a solution that would have avoided this.
 
 Use the following for info on how to calc tax:
 
