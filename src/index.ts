@@ -1,13 +1,33 @@
-import adder from './js/adder'
-import logger from './js/logger'
-import './css/style.css'
+import {
+  businessName,
+  businessSlogan,
+  corpTaxRate,
+  declareIndepenceAndRefuseToPayTaxes,
+  deductions,
+  fraudulentDeductions,
+  medicareRate,
+  revenue,
+} from './js/data';
 
-console.log('=====>>>> App start!')
+import generateTaxReport from './js/generateTaxReport'
+import calculateTax from './js/calculateTax';
 
-const result = adder(10, 2)
+import './css/style.css';
 
-logger(`The result is: ${result}`)
+const dataPacket = {
+  businessName,
+  businessSlogan,
+  corpTaxRate,
+  deductions,
+  fraudulentDeductions,
+  medicareRate,
+  revenue,
+};
 
+const taxResults = calculateTax(dataPacket);
 
-if (module.hot)       // eslint-disable-line no-undef
-  module.hot.accept() // eslint-disable-line no-undef
+const report = generateTaxReport(taxResults, declareIndepenceAndRefuseToPayTaxes);
+
+console.log(report)
+
+if (module.hot) module.hot.accept(); // eslint-disable-line no-undef
