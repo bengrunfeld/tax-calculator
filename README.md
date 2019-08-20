@@ -1,4 +1,12 @@
-# Texpack - TypeScript, Express and Webpack Boilerplate
+# Tax Calculator
+
+Use the following for info on how to calc tax:
+
+https://www.business.gov.au/change-and-growth/restructuring/sole-trader-to-a-company/difference-between-a-sole-trader-and-a-company/how-is-tax-calculated
+
+https://www.youtube.com/watch?v=19f9mgPFDlU
+
+## Texpack - TypeScript, Express and Webpack Boilerplate
 
 Texpack is the bare-bones Express and Webpack boilerplate with ES6+ babel transpilation, ESLint linting, Hot Module Reloading, and Jest test framework enabled.
 
