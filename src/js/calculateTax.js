@@ -33,13 +33,11 @@ const calcTotalTaxOwed = (totalCompanyTax, medicareLevy) =>
   totalCompanyTax + medicareLevy;
 
 const calculateTax = ({
-  businessName,
-  businessSlogan,
   corpTaxRate,
   deductions,
   fraudulentDeductions,
   medicareRate,
-  revenue,
+  revenue
 }) => {
   const totalRevenue = addRevenue(revenue);
 
@@ -59,7 +57,7 @@ const calculateTax = ({
     taxableIncome,
     totalCompanyTax,
     medicareLevy,
-    totalTaxOwed,
+    totalTaxOwed
   };
 };
 

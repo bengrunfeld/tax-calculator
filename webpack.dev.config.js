@@ -1,19 +1,22 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.ts']
+    main: [
+      "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000",
+      "./src/index.ts"
+    ]
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/',
-    filename: '[name].js'
+    path: path.join(__dirname, "dist"),
+    publicPath: "/",
+    filename: "[name].js"
   },
-  mode: 'development',
-  target: 'web',
-  devtool: 'source-map',
+  mode: "development",
+  target: "web",
+  devtool: "source-map",
   resolve: {
     extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
   },
@@ -21,7 +24,7 @@ module.exports = {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
       { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-      { test: /\.js$/, loader: "source-map-loader", enforce: "pre", },
+      { test: /\.js$/, loader: "source-map-loader", enforce: "pre" },
       {
         enforce: "pre",
         test: /\.js$/,
@@ -36,26 +39,26 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: "babel-loader"
       },
       {
         // Loads the javacript into html template provided.
-        // Entry point is set below in HtmlWebPackPlugin in Plugins 
+        // Entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: "html-loader"
             //options: { minimize: true }
           }
         ]
       },
-      { 
+      {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ["style-loader", "css-loader"]
       },
       {
-       test: /\.(png|svg|jpg|gif)$/,
-       use: ['file-loader']
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"]
       }
     ]
   },
@@ -63,9 +66,9 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
       filename: "./index.html",
-      excludeChunks: [ 'server' ]
+      excludeChunks: ["server"]
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ]
-}
+};

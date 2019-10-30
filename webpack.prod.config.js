@@ -1,20 +1,20 @@
-const path = require('path')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: './src/index.ts'
+    main: "./src/index.ts"
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/',
-    filename: '[name].js'
+    path: path.join(__dirname, "dist"),
+    publicPath: "/",
+    filename: "[name].js"
   },
-  target: 'web',
-  devtool: 'source-map',
+  target: "web",
+  devtool: "source-map",
   resolve: {
     extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
   },
@@ -34,22 +34,22 @@ module.exports = {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
       { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-      { test: /\.js$/, loader: "source-map-loader", enforce: "pre", },
+      { test: /\.js$/, loader: "source-map-loader", enforce: "pre" },
       {
         // Transpiles ES6-8 into ES5
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: "babel-loader"
         }
       },
       {
         // Loads the javacript into html template provided.
-        // Entry point is set below in HtmlWebPackPlugin in Plugins 
+        // Entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader',
+            loader: "html-loader",
             options: { minimize: true }
           }
         ]
@@ -57,24 +57,24 @@ module.exports = {
       {
         // Loads images into CSS and Javascript files
         test: /\.jpg$/,
-        use: [{loader: 'url-loader'}]
+        use: [{ loader: "url-loader" }]
       },
       {
         // Loads CSS into a file when you import it via Javascript
         // Rules are set in MiniCssExtractPlugin
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
+      }
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/html/index.html',
-      filename: './index.html'
+      template: "./src/html/index.html",
+      filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     })
   ]
-}
+};
