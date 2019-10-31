@@ -1,11 +1,4 @@
-export type Report = {
-  totalRevenue: number
-  totalDeductions: number
-  taxableIncome: number
-  totalCompanyTax: number
-  medicareLevy: number
-  totalTaxOwed: number
-}
+export type Report = { [index: string]: number }
 
 export type Declaration = {
   declareIndepenceAndRefuseToPayTaxes: boolean
