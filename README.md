@@ -16,7 +16,8 @@
 ## Coding exercise (intermediate)
 
 1. Run `git checkout with-untyped-library`
-2. Ensure `strict: true` in `tsconfig.json`
-3. Run `npm start`
-4. Navigate through the errors until the report prints out properly in the browser console
-5. If you get stuck, ask for help, or you can have a look at my solution in the `with-delcaration-file` branch
+2. Run `npm install --save ts-tax-calc`
+3. Ensure `strict: true` in `tsconfig.json`
+4. Run `npm start`
+5. Navigate through the errors until the report prints out properly in the browser console
+6. If you get stuck, ask for help, or you can have a look at my solution in the `with-delcaration-file` branch
