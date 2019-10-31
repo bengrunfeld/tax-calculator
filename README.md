@@ -1,26 +1,26 @@
 # Tax Calculator
 
-## Coding Exercise:
+## Test that the basic app works
 
-1. Implement types on the data file 
-2. Implement types on the tax calculator file
-3. Business name and slogan were forgotten in the Tax Report. Implement a solution that would have avoided this.
+1. Download code with `git clone git@github.com:bengrunfeld/tax-calculator.git`
+2. To test that everything works, run `npm start`, then navigate to `localhost:8080` in your browser, and open your console. If you see a tax report there, everything works! =)
 
-Use the following for info on how to calc tax:
+## Coding exercise (basic)
 
-https://www.business.gov.au/change-and-growth/restructuring/sole-trader-to-a-company/difference-between-a-sole-trader-and-a-company/how-is-tax-calculated
+1. In `./tsconfig.json`, change the value of `strict` to `true`
+2. Run `npm start`
+3. Naviate through the wall of errors
+4. If you get stuck, ask for help from one of the seniors walking around or you can check out the solution in the `with-typescript` branch with the command: `git checkout with-typescript`
+5. Exercise is finished when report prints out in browser console as expected
 
-https://www.youtube.com/watch?v=19f9mgPFDlU
+## Coding exercise (intermediate)
 
-## Texpack - TypeScript, Express and Webpack Boilerplate
-
-Texpack is a bare-bones TypeScript, Express, and Webpack boilerplate with ES6+ babel transpilation, ESLint, Hot Module Reloading, and Jest test framework enabled.
-
-Texpack has two build modes: Development and Production.
-
-When you run `npm run buildDev`, Javascript, HTML, and CSS files are unminified and not uglified, meaning that you can easily inspect them in Chrome Dev Tools. Hot Module Reloading is enabled via `webpack-dev-middleware` and `webpack-hot-middleware`. 
-
-When you run `npm run buildProd`, Javascript, HTML, and CSS files are all minified and uglified, and images are encoded as Base64 directly into your CSS file, which results in less calls to the server for image files.
+1. Run `git checkout with-untyped-library`
+2. Ensure `strict: true` in `tsconfig.json`
+3. Run `npm start`
+4. Navigate through the errors until the report prints out properly in the browser console
+5. If you get stuck, ask for help, or you can have a look at my solution in the `with-delcaration-file` branch
+   and CSS files are all minified and uglified, and images are encoded as Base64 directly into your CSS file, which results in less calls to the server for image files.
 
 ### For testing
 
@@ -29,4 +29,4 @@ When you run `npm run buildProd`, Javascript, HTML, and CSS files are all minifi
 
 ## Security
 
-Please ensure that your version of Node and NPM are up to date, and run `npm audit` after installation to ensure that no vulnerabilities exist. If they do, follow the audits instructions on how to resolve them. 
+Please ensure that your version of Node and NPM are up to date, and run `npm audit` after installation to ensure that no vulnerabilities exist. If they do, follow the audits instructions on how to resolve them.
