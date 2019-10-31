@@ -20,7 +20,8 @@
     "@types/webpack-dev-middleware": "^2.0.3",
     "@types/webpack-env": "^1.14.0",
     "@types/webpack-hot-middleware": "^2.16.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ts-tax-calc": "^1.0.0"
   },
   "engines": {
     "node": ">=4.3.2"

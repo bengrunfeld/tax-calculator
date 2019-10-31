@@ -1,4 +1,5 @@
-import { generateReport, calculateTax, displayReport } from "./"
+import { calculateTax } from "ts-tax-calc"
+import { generateReport, displayReport } from "./"
 import { data } from "../data"
 import "../css/style.css"
 
