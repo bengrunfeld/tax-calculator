@@ -1,21 +1,9 @@
 declare module "ts-tax-calc" {
-  type Account = { [index: string]: string }
   type Revenue = { [index: string]: number }
   type Deductions = { [index: string]: number }
   type FraudulentDeductions = number[]
   type MedicareRate = number
   type CorpTaxRate = number
-  type Declaration = boolean
-
-  type Data = {
-    account: Account
-    revenue: Revenue
-    deductions: Deductions
-    fraudulentDeductions: FraudulentDeductions
-    medicareRate: MedicareRate
-    corpTaxRate: CorpTaxRate
-    declareIndepenceAndRefuseToPayTaxes: Declaration
-  }
 
   export function addRevenue(revenue: Revenue): number
 
