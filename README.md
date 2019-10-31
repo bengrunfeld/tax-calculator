@@ -2,8 +2,10 @@
 
 ## Test that the basic app works
 
-1. Download code with `git clone git@github.com:bengrunfeld/tax-calculator.git`
-2. To test that everything works, run `npm start`, then navigate to `localhost:8080` in your browser, and open your console. If you see a tax report there, everything works! =)
+1. Download code with `git clone https://github.com/bengrunfeld/tax-calculator.git`
+2. `npm install`
+3. `npm run buildDev`
+4. To test that everything works, run `npm start`, then navigate to `localhost:8080` in your browser, and open your console. If you see a tax report there, everything works! =)
 
 ## Coding exercise (basic)
 
