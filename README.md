@@ -20,13 +20,3 @@
 3. Run `npm start`
 4. Navigate through the errors until the report prints out properly in the browser console
 5. If you get stuck, ask for help, or you can have a look at my solution in the `with-delcaration-file` branch
-   and CSS files are all minified and uglified, and images are encoded as Base64 directly into your CSS file, which results in less calls to the server for image files.
-
-### For testing
-
-    npm test                // runs test
-    npm run coverage        // generates a coverage report
-
-## Security
-
-Please ensure that your version of Node and NPM are up to date, and run `npm audit` after installation to ensure that no vulnerabilities exist. If they do, follow the audits instructions on how to resolve them.
