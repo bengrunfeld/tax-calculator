@@ -1,10 +1,21 @@
-const account = {
+import {
+  Account,
+  Revenue,
+  Deductions,
+  FraudulentDeductions,
+  MedicareRate,
+  CorpTaxRate,
+  Declaration,
+  Data
+} from "./data.types"
+
+const account: Account = {
   name: "Tycho Space Station",
   slogan: "The hoopiest shipyard in the galaxy!",
   ansibleNumber: "142-682-1828-443"
-};
+}
 
-const revenue = {
+const revenue: Revenue = {
   january: 25000,
   february: 23500,
   march: 28000,
@@ -17,25 +28,25 @@ const revenue = {
   october: 28500,
   november: 23200,
   december: 19500
-};
+}
 
-const deductions = {
+const deductions: Deductions = {
   darkMatterGenerators: 38000,
   advertising: 15000,
   medicalSupplies: 45000,
   rocketFuel: 60000,
   laserBlasters: 24000
-};
+}
 
-const fraudulentDeductions = [27000, 3000, 2600];
+const fraudulentDeductions: FraudulentDeductions = [27000, 3000, 2600]
 
-const medicareRate = 0.015;
+const medicareRate: MedicareRate = 0.015
 
-const corpTaxRate = 0.3;
+const corpTaxRate: CorpTaxRate = 0.3
 
-const declareIndepenceAndRefuseToPayTaxes = false;
+const declareIndepenceAndRefuseToPayTaxes: Declaration = false
 
-const data = {
+const data: Data = {
   account,
   revenue,
   deductions,
@@ -43,6 +54,6 @@ const data = {
   medicareRate,
   corpTaxRate,
   declareIndepenceAndRefuseToPayTaxes
-};
+}
 
-export default data;
+export default data
